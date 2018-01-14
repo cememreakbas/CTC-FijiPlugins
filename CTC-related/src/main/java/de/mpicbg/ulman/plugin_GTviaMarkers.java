@@ -457,9 +457,9 @@ public class plugin_GTviaMarkers implements Command
 		//head less variant:
 		//start up our own ImageJ without GUI
 		final ImageJ ij = new net.imagej.ImageJ();
-		//ij.ui().showUI();
-		//ij.command().run(plugin_GTviaMarkers.class, true);
-
+		ij.ui().showUI();
+		ij.command().run(plugin_GTviaMarkers.class, true);
+/*
 		try {
 			//start up the worker class
 			final machineGTViaMarkers_Worker Worker
@@ -471,8 +471,8 @@ public class plugin_GTviaMarkers implements Command
 		catch (ImgIOException e) {
 			ij.log().error("plugin_GTviaMarkers error: "+e);
 		}
-
+*/
 		//and quit
-		ij.appEvent().quit();
+		//ij.appEvent().quit();
 	}
 }
